@@ -53,6 +53,9 @@ app.get("/listings/:id", wrapAsync(async (req,res)=>{
 
 //Create Route
 app.post("/listings", wrapAsync(async(req,res,next)=>{
+    if(!req.body.listing){
+        throw new ExpressError(400,"Send valid data for listing");
+    }
       const newListing = new Listing(req.body.listing);
       await newListing.save();
       res.redirect("/listings");
@@ -68,6 +71,9 @@ app.get("/listings/:id/edit", wrapAsync(async(req,res)=>{
 
 //upadate route
 app.put("/listings/:id", wrapAsync(async(req,res)=>{
+    if(!req.body.listing){
+        throw new ExpressError(400,"Send valid data for listing");
+    }
     let {id}=req.params;
     await Listing.findByIdAndUpdate(id,{...req.body.listing});
     res.redirect(`/listings/${id}`);
@@ -85,8 +91,9 @@ app.all("*",(req,res,next)=>{
 });
 
 app.use((err,req,res,next) =>{
-    let {statusCode , message } = err;
-   res.status(statusCode).send(message);
+    let {statusCode=500, message="something went wrong!" } = err;
+    res.status(statusCode).render("error.ejs",{message});
+   //res.status(statusCode).send(message);
 });
 
 app.listen(8080,()=>{
