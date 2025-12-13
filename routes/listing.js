@@ -4,6 +4,7 @@ const wrapAsync = require("../utils/wrapAsync.js");
 const ExpressError = require("../utils/expressError.js");
 const {listingSchema} =require("../schema.js");
 const Listing = require("../models/listing.js");
+const { redirect } = require("react-router-dom");
 
 const validateListing = (req,res,next)=>{
   let {error} = listingSchema.validate(req.body);
@@ -39,6 +40,7 @@ router.post("/",validateListing,
      wrapAsync(async(req,res,next)=>{
       const newListing = new Listing(req.body.listing);
       await newListing.save();
+      req.flash("success","Successfully made a new listing");
       res.redirect("/listings");
     })
 );
@@ -55,6 +57,7 @@ router.put("/:id",validateListing,
     wrapAsync(async(req,res)=>{
     let {id}=req.params;
     await Listing.findByIdAndUpdate(id,{...req.body.listing});
+    req.flash("success","Listing updated!");
     res.redirect(`/listings/${id}`);
 }));
 
@@ -62,6 +65,7 @@ router.put("/:id",validateListing,
 router.delete("/:id",  wrapAsync( async(req,res)=>{
     let {id}=req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);
+     req.flash("success","Listing deleted successfully");
     res.redirect("/listings"); 
 }));
 
