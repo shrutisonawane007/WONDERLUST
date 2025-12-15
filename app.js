@@ -66,15 +66,15 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get("/demouser",async(req,res)=>{
-    let fakeUser = new User({
-        email:"student@gmail.com",
-        username : "delta1-student",
-    });
+// app.get("/demouser",async(req,res)=>{
+//     let fakeUser = new User({
+//         email:"student@gmail.com",
+//         username : "delta1-student",
+//     });
 
-     let  registerdUser =await User.register(fakeUser,"helloword");
-     res.send(registerdUser);
-});
+//      let  registerdUser =await User.register(fakeUser,"helloword");
+//      res.send(registerdUser);
+// });
 
 
 //listing routes
