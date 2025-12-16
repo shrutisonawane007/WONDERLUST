@@ -14,12 +14,17 @@
               <p class="card-text"><%= listing.location %></p>
            </div>
         </div>
-        <div class="btns">
-           <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">EDIT</a>
-            <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
+
+       
+          <div class="btns">
+              <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">EDIT</a>
+              <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
               <button  class="btn btn-dark offset-5">DELETE</button>
-            </form>
-        </div>
+              </form>
+          </div>
+     
+       
+   
 
         <div class="col-6 offset-3 mb-3">
           <hr>
