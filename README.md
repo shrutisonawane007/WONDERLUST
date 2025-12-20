@@ -38,6 +38,13 @@ This file secures:
 
 ---
 
+✨ CORE FEATURES
+Full CRUD: Users can Create, Read, Update, and Delete hotel listings.
+Authentication: Secure Sign-up and Login using Passport.js.
+Authorization: Secure permissions so only the owner can Edit or Delete their listings.
+Review System: Users can leave star ratings and feedback for each stay.
+Fully Responsive: The design works perfectly on Mobile, Tablet, and Desktop.
+
 ## ⚙️ Local Setup and Installation
 
 1. **Clone the repository:**
@@ -45,6 +52,25 @@ This file secures:
    git clone [https://github.com/your-username/wanderlust.git](https://github.com/your-username/wanderlust.git)
    cd wanderlust
 2.**Install dependencies**
-  ```bash
-  npm install
+npm install
+
+3.**Setup Environment Variables (.env)**
+# MongoDB Atlas Link
+ATLASDB_URL=your_mongodb_atlas_link
+
+# Cloudinary Keys
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_api_key
+CLOUD_API_SECRET=your_api_secret
+
+# Mapbox Token
+MAP_TOKEN=your_mapbox_public_token
+
+# Secret for Login/Session
+SECRET=mysupersecretcode
+
+4.**To start the project**
+node app.js
+
+
 
