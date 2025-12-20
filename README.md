@@ -53,7 +53,7 @@ This file secures:
    git clone [https://github.com/your-username/wanderlust.git](https://github.com/your-username/wanderlust.git)
    cd wanderlust
 2.**Install dependencies**
-npm install
+* **npm install**
 
 3.**Setup Environment Variables (.env)**
 
@@ -65,7 +65,7 @@ npm install
 * **SECRET**=mysupersecretcode
 
 4.**To start the project**
-node app.js
+* **node app.js**
 
 
 
