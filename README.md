@@ -57,12 +57,12 @@ npm install
 
 3.**Setup Environment Variables (.env)**
 
-ATLASDB_URL=your_mongodb_atlas_link
-CLOUD_NAME=your_cloudinary_name
-CLOUD_API_KEY=your_api_key
-CLOUD_API_SECRET=your_api_secret
-MAP_TOKEN=your_mapbox_public_token
-SECRET=mysupersecretcode
+* **ATLASDB_URL**=your_mongodb_atlas_link
+* **CLOUD_NAME**=your_cloudinary_name
+* **CLOUD_API_KEY**=your_api_key
+* **CLOUD_API_SECRET**=your_api_secret
+* **MAP_TOKEN**=your_mapbox_public_token
+* **SECRET**=mysupersecretcode
 
 4.**To start the project**
 node app.js
