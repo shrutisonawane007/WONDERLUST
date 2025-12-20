@@ -9,11 +9,8 @@ const listingSchema = new Schema({
     },
     description : String,
     image : {
-        type : String,
-        set : (v) =>
-         v === "" 
-        ?"https://media.istockphoto.com/id/155428937/photo/ranthambhore-np-in-rajasthan-india.jpg?s=2048x2048&w=is&k=20&c=bH3xj1NihK3Ty-mnW4yVPR0FmZgPCeE3KktJy8uPhvg="
-         : v,
+        url : String,
+        filename : String,
     },
     price : Number,
     location : String,
@@ -27,7 +24,18 @@ const listingSchema = new Schema({
     owner :{
         type : Schema.Types.ObjectId,
         ref : "User",
-    }
+    },
+    geometry: {
+        type: {
+          type: String,
+          enum: ['Point'],
+          required: true
+        },
+        coordinates: {
+          type: [Number],
+          required: true
+        },
+      },
 });
 
 listingSchema.post("findOneAndDelete",async(listing)=>{

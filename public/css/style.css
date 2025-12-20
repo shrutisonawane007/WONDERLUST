@@ -7,6 +7,9 @@ body{
 .container{
     flex: 1;
 }
+.container-fluid{
+   background-color: white;
+}
  .navbar{
     height: 5rem;
     background-color: white;
@@ -18,6 +21,7 @@ body{
 .nav-link{
     color: #222222 !important;
 }
+
 /* footer */
 .f-info-links a{
     text-decoration: none;
@@ -64,6 +68,13 @@ font-weight: 400 !important ;
 .listing-link{
     text-decoration: none;
 }
+@media screen and (max-width: 768px) {
+    .card.col-5 {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
 /* card effect */
 .card-img-overlay{
     opacity: 0;
@@ -92,4 +103,15 @@ font-weight: 400 !important ;
 .show-card{
     padding-left: 0;
     padding-right: 0;
+}
+/* map */
+#map{
+    width: 80vh;
+    height: 400px;
+}
+@media screen and (max-width: 768px) {
+    #map{
+        width: 90%;
+        height: 300px;
+    }
 }

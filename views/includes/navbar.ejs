@@ -1,23 +1,60 @@
+<style>
+  .search-btn {
+    background-color: #fe422d;
+    color: white;
+    border-radius:25px;
+    padding: 0 1rem 0 1rem;
+   }
+.search-btn:hover {
+    background-color: #fe422d;
+    color: white;
+   }
+.search-btn i{
+    display: inline;
+    margin-right: 0.5rem;
+   }
+.search-inp{
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+   }
+#Wonderlust{
+    font-family: 'Montserrat', sans-serif!important;
+    font-size: 1.5rem;
+    color: #fe422d;
+    font-weight: bold;
+   }
+  @media screen and (max-width: 768px) {
+    .d-flex {
+      display: none !important;
+    }
+  }
+</style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+    <a class="navbar-brand" id="Wonderlust" href="/listings"><i class="fa-regular fa-compass"></i>Wonderlust</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link"  href="/">Home</a>
-        <a class="nav-link" href="/listings">All listings</a>
-        <a class="nav-link" href="/listings/new">Add New Listing</a>
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 search-inp" type="search"  placeholder="Search Destinations" aria-label="Search Destinations">
+          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass" ></i>Search</button>
+        </form>
       </div>
 
       <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Airbnb your home</a>
         <% if(!currentUser){ %>
-        <a class="nav-link"  href="/signup">Sign up</a>
-        <a class="nav-link" href="/login">Log in</a>
+        <a class="nav-link"  href="/signup"><b>Sign up</b></a>
+        <a class="nav-link" href="/login"><b>Log in</b></a>
         <% } %>
         <% if(currentUser){ %>
-        <a class="nav-link" href="/logout">Log out</a>
+        <a class="nav-link" href="/logout"><b>Log out</b></a>
         <% } %>
       </div>
     </div>
