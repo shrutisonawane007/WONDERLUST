@@ -55,18 +55,12 @@ Fully Responsive: The design works perfectly on Mobile, Tablet, and Desktop.
 npm install
 
 3.**Setup Environment Variables (.env)**
-# MongoDB Atlas Link
-ATLASDB_URL=your_mongodb_atlas_link
 
-# Cloudinary Keys
+ATLASDB_URL=your_mongodb_atlas_link
 CLOUD_NAME=your_cloudinary_name
 CLOUD_API_KEY=your_api_key
 CLOUD_API_SECRET=your_api_secret
-
-# Mapbox Token
 MAP_TOKEN=your_mapbox_public_token
-
-# Secret for Login/Session
 SECRET=mysupersecretcode
 
 4.**To start the project**
