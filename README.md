@@ -38,12 +38,13 @@ This file secures:
 
 ---
 
-✨ CORE FEATURES
-Full CRUD: Users can Create, Read, Update, and Delete hotel listings.
-Authentication: Secure Sign-up and Login using Passport.js.
-Authorization: Secure permissions so only the owner can Edit or Delete their listings.
-Review System: Users can leave star ratings and feedback for each stay.
-Fully Responsive: The design works perfectly on Mobile, Tablet, and Desktop.
+
+**✨ CORE FEATURES**
+* **Full CRUD:** Users can Create, Read, Update, and Delete hotel listings.
+* **Authentication:** Secure Sign-up and Login using Passport.js.
+* **Authorization:** Secure permissions so only the owner can Edit or Delete their listings.
+* **Review System:** Users can leave star ratings and feedback for each stay.
+* **Fully Responsive:** The design works perfectly on Mobile, Tablet, and Desktop.
 
 ## ⚙️ Local Setup and Installation
 
