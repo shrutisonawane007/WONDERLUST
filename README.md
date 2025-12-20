@@ -45,26 +45,6 @@ This file secures:
    git clone [https://github.com/your-username/wanderlust.git](https://github.com/your-username/wanderlust.git)
    cd wanderlust
 2.**Install dependencies**
+  ```bash
   npm install
-  
-3.**Configure Environment Variables: Create a .env file in the root directory and add the following **
- 
-  CLOUD_NAME=your_cloudinary_name
-  CLOUD_API_KEY=your_api_key
-  CLOUD_API_SECRET=your_api_secret
-  MAP_TOKEN=your_mapbox_token
-  ATLASDB_URL=your_mongodb_atlas_url
-  SECRET=your_session_secret
 
-4.**Run the application**
-   node app.js
-
-
-✨ Key Features
-Full CRUD: Create, Read, Update, and Delete property listings.
-User Reviews: Rate and review stays with a 1-5 star system.
-Authentication: Sign up, Login, and Logout functionality.
-Authorization: Owners have exclusive rights to edit or delete their own listings.
-Image Uploads: Seamlessly upload and preview property photos.
-Map Integration: View property locations with interactive zoom and navigation.
-  
