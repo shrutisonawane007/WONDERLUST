@@ -41,6 +41,18 @@
              <input name="listing[location]" value="<%= listing.location%>" type="text" class="form-control"  required>
              <div class="invalid-feedback">Location should be valid </div>
         </div>
+
+        <div class="mb-3">
+             <lable class="form-lable" for="category">Category</lable>
+             <select name="listing[category]" class="form-select" required>
+                <option value="auto">✨ Auto-Detect Category (Smart Prediction)</option>
+                <% const categories = ["Trending", "Rooms", "Iconic cities", "Mountains", "Castles", "Amezing pools", "Camping", "Farms", "Arctic", "Domes", "Boats"]; %>
+                <% for (let cat of categories) { %>
+                  <option value="<%= cat %>" <%= (listing.category === cat) ? 'selected' : '' %>><%= cat %></option>
+                <% } %>
+             </select>
+             <div class="invalid-feedback">Please select a category</div>
+        </div>
         <button class="btn btn-dark edit-btn mt-3 mb-3">EDIT</button>
     </form>
  </div>

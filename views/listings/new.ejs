@@ -37,6 +37,25 @@
           <input name="listing[location]" placeholder="Jaipur, Rajsthan" class="form-control"type="text" required>
           <div class="invalid-feedback">Location should be valid </div>
         </div>
+
+        <div class="mb-3">
+          <lable class="form-lable" for="category">Category</lable>
+          <select name="listing[category]" class="form-select" required>
+            <option value="auto" selected>✨ Auto-Detect Category (Smart Prediction)</option>
+            <option value="Trending">Trending</option>
+            <option value="Rooms">Rooms</option>
+            <option value="Iconic cities">Iconic cities</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Castles">Castles</option>
+            <option value="Amezing pools">Amezing pools</option>
+            <option value="Camping">Camping</option>
+            <option value="Farms">Farms</option>
+            <option value="Arctic">Arctic</option>
+            <option value="Domes">Domes</option>
+            <option value="Boats">Boats</option>
+          </select>
+          <div class="invalid-feedback">Please select a category</div>
+        </div>
         <br>
         <button class="btn btn-dark add-btn">ADD</button>
          <br><br><br>
